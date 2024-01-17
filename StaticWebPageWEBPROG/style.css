@@ -1,0 +1,282 @@
+body {
+    background-color: #141414;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow: hidden;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+body, ul, h1, h2, p, h4, h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.loading_bar {
+    width: 0;
+    height: 1px;
+    background-color: red;
+    opacity: 1;
+}
+
+.loading_bar_visible body {
+    opacity: 1;
+}
+
+p {
+    color: #ffffff;
+    text-align: justify;
+    letter-spacing: 0;
+    word-spacing: 3px;
+    line-height: 2;
+    font-size: 20px;
+}
+
+.TopBar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.Menu ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.Menu ul li a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-weight: 1000;
+    padding: 25px;
+    align-items: center;
+    text-shadow: 0 0 5px white;
+    transition: font-size 0.1s ease-in-out;
+}
+
+.Menu ul li a:hover {
+    font-size: 20px;
+}
+
+h1 {
+    color: white;
+    text-shadow: 0 0 5px white;
+}
+
+div.intro > h1, p {
+    user-select: none;
+    align-items: center;
+    text-align: center;
+}
+
+div.TopBar h1 {
+    font-size: 20px;
+}
+
+div.slide > div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div.slide {
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: auto;
+    width: 75%;
+    background-color: #111111;
+    box-shadow: 0 0 20px blue;
+    text-align: center;
+}
+
+div.slide h1, div.slide h2, div.slide h4 {
+    color: white;
+    margin: 25px;
+    text-align: center;
+}
+
+div.slide p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    text-align: justify;
+    line-height: 2;
+}
+
+#canvas {
+    position: absolute;
+
+    z-index: -1;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+div.container {
+    background-color: #111111;
+    box-shadow: 0 0 25px 3px blue;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 50px;
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 20%;
+    transform: translate(-50%, -35%);
+}
+
+.wrapper {
+    position: relative;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.slider {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider div {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.slider_nav {
+    display: flex;
+    column-gap: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.slider_nav a {
+    text-decoration: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.5;
+    transition: opacity ease-in-out 0.2s, width ease-in-out 0.2s;
+}
+
+.slider_nav a:hover {
+    opacity: 1;
+}
+
+.slider_nav a.active {
+    opacity: 1;
+    width: 30px;
+    box-shadow: 0 0 5px white;
+}
+
+.card {
+    user-select: none;
+    text-align: center;
+    align-items: center;
+}
+
+.card > p, h2 {
+    text-align: justify;
+}
+
+.card > img{
+    height: 75px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+#slide_3 > div > a{
+    text-decoration: none;
+}
+
+#slide_3 > p{
+    text-align: center;
+    margin: 50px;
+}
+
+.link_container {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.link_container a img {
+    transition: height 0.1s ease-out;
+}
+
+.link_container a img:hover {
+    height: 100px;
+}
+
+.bg_card_container {
+    user-select: none;
+    display: flex;
+    margin: 10% auto;
+    overflow: hidden;
+    width: 75%;
+}
+
+.bg_card_container .bg_card {
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 25px;
+    width: 500px;
+    height: 50px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: transparent;
+    transition: width 0.2s ease-in-out, height 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.15s ease-in-out;
+}
+
+.bg_card_container .bg_card p {
+    text-align: left;
+}
+
+
+.bg_card_container .bg_card:hover {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    border: 3px solid white;
+    box-shadow: 0 0 25px 3px blue;
+    background-color: #111111;
+}
+
+.bg_card_container .bg_card p, .bg_card_container .bg_card h2, .bg_card_container .bg_card h3 {
+    text-align: left;
+    color: transparent;
+    transition: color 0s ease-in-out;
+}
+
+.bg_card_container .bg_card:hover p, .bg_card_container .bg_card:hover h2, .bg_card_container .bg_card:hover h3 {
+    color: white;
+}
+
+.extra {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 70%;
+    height: 100px;
+    margin: 10px auto;
+    padding: 50px;
+    box-shadow: 0 0 10px white;
+    background-color: #111111;
+}
